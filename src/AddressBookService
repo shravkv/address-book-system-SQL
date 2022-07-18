@@ -1,0 +1,2 @@
+" Welcome to Address Book Service Program on Mysql DB "
+mysql> create database address_book_service;
