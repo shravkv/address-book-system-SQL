@@ -1,30 +1,6 @@
--------------------------------------------------------------------------
-UC3-->Inserting values into a table
--------------------------------------------------------------------------
-
-mysql> insert into address_book(firstName,lastName,address,city,state,email,zipCode,Phone_number)values
-    -> ('Sri','Bhargav','Mumbai','Mumbai','Maharastra','Bharagav@gmail.com','556856','123456788'),
-    -> ('Srav','Sunny','Mncl','Mncl','Telanagana','sunny@gmail.com','556845','123456456'),
-    -> ('Shru','Kumar','Gdk','Gdk','Goa','kumar@gmail.com','5567654','123455647');
-Query OK, 3 rows affected (2.50 sec)
-Records: 3  Duplicates: 0  Warnings: 0
-
-mysql> select * from address_book;
-+-----------+----------+---------+--------+------------+--------------------+---------+--------------+
-| firstName | lastName | address | city   | state      | email              | zipCode | phone_number |
-+-----------+----------+---------+--------+------------+--------------------+---------+--------------+
-| Sri       | Bhargav  | Mumbai  | Mumbai | Maharastra | Bharagav@gmail.com |  556856 |    123456788 |
-| Srav      | Sunny    | Mncl    | Mncl   | Telanagana | sunny@gmail.com    |  556845 |    123456456 |
-| Shru      | Kumar    | Gdk     | Gdk    | Goa        | kumar@gmail.com    | 5567654 |    123455647 |
-+-----------+----------+---------+--------+------------+--------------------+---------+--------------+
-3 rows in set (0.12 sec)
-
------------------------------------------------------------------------------------------------------
-UC4-->Edit existing Contact with using their name
-----------------------------------------------------------------------------------------------------
-mysql> update address_book set firstName='Sravan' where lastName='Kumar';
-Query OK, 1 row affected (0.75 sec)
-Rows matched: 1  Changed: 1  Warnings: 0
+------------------------------------------------------------------------------------------------------
+UC5-->Delete contact with using person name
+------------------------------------------------------------------------------------------------------
 
 mysql> select * from address_book;
 +-----------+----------+---------+--------+------------+--------------------+---------+--------------+
@@ -34,4 +10,16 @@ mysql> select * from address_book;
 | Srav      | Sunny    | Mncl    | Mncl   | Telanagana | sunny@gmail.com    |  556845 |    123456456 |
 | Sravan    | Kumar    | Gdk     | Gdk    | Goa        | kumar@gmail.com    | 5567654 |    123455647 |
 +-----------+----------+---------+--------+------------+--------------------+---------+--------------+
-3 rows in set (0.10 sec)
+3 rows in set (0.14 sec)
+
+mysql> delete from address_book where firstName='Sravan';
+Query OK, 1 row affected (0.27 sec)
+
+mysql> select * from address_book;
++-----------+----------+---------+--------+------------+--------------------+---------+--------------+
+| firstName | lastName | address | city   | state      | email              | zipCode | phone_number |
++-----------+----------+---------+--------+------------+--------------------+---------+--------------+
+| Sri       | Bhargav  | Mumbai  | Mumbai | Maharastra | Bharagav@gmail.com |  556856 |    123456788 |
+| Srav      | Sunny    | Mncl    | Mncl   | Telanagana | sunny@gmail.com    |  556845 |    123456456 |
++-----------+----------+---------+--------+------------+--------------------+---------+--------------+
+2 rows in set (0.00 sec)
