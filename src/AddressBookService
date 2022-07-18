@@ -1,2 +1,8 @@
 " Welcome to Address Book Service Program on Mysql DB "
 mysql> create database address_book_service;
+
+mysql> CREATE DATABASE address_book_service;
+Query OK, 1 row affected (1.38 sec)
+
+mysql> USE address_book_service;
+Database changed
