@@ -1,24 +1,16 @@
-mysql> CREATE table address_book(firstName varchar(20) not null ,
-    -> lastName varchar(20) not null ,
-    -> address varchar(100) not null ,
-    -> city varchar(30) not null ,
-    -> state varchar(30) not null ,
-    -> email varchar(30) not null ,
-    -> zipCode int not null ,
-    -> phone_number int not null);
-Query OK, 0 rows affected (3.14 sec)
+mysql> insert into address_book(firstName,lastName,address,city,state,email,zipCode,Phone_number)values
+    -> ('Sri','Bhargav','Mumbai','Mumbai','Maharastra','Bharagav@gmail.com','556856','123456788'),
+    -> ('Srav','Sunny','Mncl','Mncl','Telanagana','sunny@gmail.com','556845','123456456'),
+    -> ('Shru','Kumar','Gdk','Gdk','Goa','kumar@gmail.com','5567654','123455647');
+Query OK, 3 rows affected (2.50 sec)
+Records: 3  Duplicates: 0  Warnings: 0
 
-mysql> describe address_book;
-+--------------+--------------+------+-----+---------+-------+
-| Field        | Type         | Null | Key | Default | Extra |
-+--------------+--------------+------+-----+---------+-------+
-| firstName    | varchar(20)  | NO   |     | NULL    |       |
-| lastName     | varchar(20)  | NO   |     | NULL    |       |
-| address      | varchar(100) | NO   |     | NULL    |       |
-| city         | varchar(30)  | NO   |     | NULL    |       |
-| state        | varchar(30)  | NO   |     | NULL    |       |
-| email        | varchar(30)  | NO   |     | NULL    |       |
-| zipCode      | int          | NO   |     | NULL    |       |
-| phone_number | int          | NO   |     | NULL    |       |
-+--------------+--------------+------+-----+---------+-------+
-8 rows in set (0.55 sec)
+mysql> select * from address_book;
++-----------+----------+---------+--------+------------+--------------------+---------+--------------+
+| firstName | lastName | address | city   | state      | email              | zipCode | phone_number |
++-----------+----------+---------+--------+------------+--------------------+---------+--------------+
+| Sri       | Bhargav  | Mumbai  | Mumbai | Maharastra | Bharagav@gmail.com |  556856 |    123456788 |
+| Srav      | Sunny    | Mncl    | Mncl   | Telanagana | sunny@gmail.com    |  556845 |    123456456 |
+| Shru      | Kumar    | Gdk     | Gdk    | Goa        | kumar@gmail.com    | 5567654 |    123455647 |
++-----------+----------+---------+--------+------------+--------------------+---------+--------------+
+3 rows in set (0.12 sec)
