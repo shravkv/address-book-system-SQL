@@ -24,3 +24,11 @@ mysql> select * from address_book order by firstName;
 | Sri       | Bhargav  | Mumbai  | Mumbai | Maharastra | Bharagav@gmail.com |  556856 |    123456788 |
 +-----------+----------+---------+--------+------------+--------------------+---------+--------------+
 2 rows in set (0.00 sec)
+mysql> select lastname,city from address_book order by city;
++----------+--------+
+| lastname | city   |
++----------+--------+
+| Sunny    | Mncl   |
+| Bhargav  | Mumbai |
++----------+--------+
+2 rows in set (0.37 sec)
