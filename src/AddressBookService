@@ -66,3 +66,21 @@ mysql> select count(conatctType) from address_book where conatctType='Friends';
 |                  1 |
 +--------------------+
 1 row in set (0.13 sec)
+
+---------------------------------------------------------------------------------
+UC11-->Ability to add person to both Friend and Family
+------------------------------------------------------------------------------------
+
+mysql> insert into address_book(firstName,lastName,address,city,state,email,zipCode,Phone_number,bookname,conatctType)value
+    -> ('Vishangi','Dabir','Uravakonda','Panvel','Andhra','vish@gmail.com','575552','10594223','Sr','Family');
+Query OK, 1 row affected (1.09 sec)
+
+mysql> select * from address_book;
++-----------+----------+------------+--------+------------+--------------------+---------+--------------+----------+-------------+
+| firstName | lastName | address    | city   | state      | email              | zipCode | phone_number | bookName | conatctType |
++-----------+----------+------------+--------+------------+--------------------+---------+--------------+----------+-------------+
+| Sri       | Bhargav  | Mumbai     | Mumbai | Maharastra | Bharagav@gmail.com |  556856 |    123456788 | SR       | Bussiness   |
+| Srav      | Sunny    | Mncl       | Mncl   | Telanagana | sunny@gmail.com    |  556845 |    123456456 | SR       | Friends     |
+| Vishangi  | Dabir    | Uravakonda | Panvel | Andhra     | vish@gmail.com     |  575552 |     10594223 | Sr       | Family      |
++-----------+----------+------------+--------+------------+--------------------+---------+--------------+----------+-------------+
+3 rows in set (0.20 sec)
