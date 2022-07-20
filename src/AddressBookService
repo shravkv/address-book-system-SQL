@@ -44,3 +44,25 @@ mysql> select *  from address_book;
 | Srav      | Sunny    | Mncl    | Mncl   | Telanagana | sunny@gmail.com    |  556845 |    123456456 | SR       | Friends     |
 +-----------+----------+---------+--------+------------+--------------------+---------+--------------+----------+-------------+
 2 rows in set (0.00 sec)
+
+--------------------------------------------------------------------------------------------------
+UC10-->Ability to get number of contact persons i.e. count by type
+--------------------------------------------------------------------------------------------------
+
+mysql> _select count(conatctType) from address_book where conatctType='Bussiness';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '_select count(conatctType) from address_book where conatctType='Bussiness'' at line 1
+mysql> select count(conatctType) from address_book where conatctType='Bussiness';
++--------------------+
+| count(conatctType) |
++--------------------+
+|                  1 |
++--------------------+
+1 row in set (0.80 sec)
+
+mysql> select count(conatctType) from address_book where conatctType='Friends';
++--------------------+
+| count(conatctType) |
++--------------------+
+|                  1 |
++--------------------+
+1 row in set (0.13 sec)
